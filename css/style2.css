@@ -1,0 +1,906 @@
+@charset "utf-8";
+
+/* reset CSS */
+body, h1, h2, h3, h4, h5, h6, ul, ol, p { /* 2019-11-26 */
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: 'Noto Sans KR', sans-serif;
+	overflow: hidden;
+}
+ul, ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+h2 {
+	position: absolute;
+	left: 50px;
+	top: 40px;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 40px; /* 2019-11-26 */
+	font-weight: 400; /* 2019-11-26 */
+	text-transform: uppercase;
+	color: orange; /* 2019-11-26 */
+}
+h3 {
+	font-size: 50px;
+	font-weight: 400;
+	color: #ffde00;
+}
+h4 {
+	font-size: 20px;
+}
+
+/* common CSS */
+.wrapper {
+	min-width: 1100px;
+}
+
+/* header nav */
+#header .nav {
+	position: fixed;
+	left: 0;
+	top: -50px;
+	z-index: 100;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.4); /* 2019-11-26 */
+	transition: top 0.3s;
+}
+#header .nav.on {
+	top: 0;
+}
+#header .nav li {
+	display: inline-block;
+}
+#header .nav li a {
+	display: block;
+	padding: 0 40px;
+	color: #fff;
+	line-height: 50px;
+	font-size: 1em; /* 2019-11-26 */
+	transition: color 0.3s;
+}
+#header .nav li a:hover,
+#header .nav li a.on {
+	color: #ffde00;
+}
+.category {
+	position: absolute;
+	top: 0;
+}
+
+/* home */
+.home {
+	position: relative;
+	background: url(../images/bg_main.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+}
+.home .logo {
+	padding-top: 30px;
+	padding-left: 50px;
+}
+.home .logo img {
+	width: 120px; /* 2019-11-26 */
+}
+.home .text {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	margin-top: -90px;
+	text-align: center;
+}
+.home .text p {
+	text-align: center;
+	font-size: 24px; /* 2019-11-26 */
+	color: #000;
+}
+.home .text span {
+	display: block;
+	color: #ffde00;
+	font-size: 78px; /* 2019-11-26 */
+	font-weight: 800; /* 2019-11-26 */
+	font-family: 'Arvo', serif;
+	overflow: hidden;
+	border-right: .1em solid orange; /* 2019-11-26 */
+	white-space: nowrap;
+	margin: 0 auto;
+	width: 730px; /* 2019-11-26 */
+	letter-spacing: .15em;
+	animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+	from{width:0}
+	to{width:730px} /* 2019-11-26 */
+}
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange }
+}
+
+/* GNB */
+#GNB {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 90;
+	width: 100%;
+	height: 50px;
+	text-align: right;
+}
+#GNB ul {
+	padding-right: 100px;
+	padding-top: 30px;
+}
+#GNB li {
+	display: inline-block;
+}
+#GNB li a {
+	display: block;
+	padding: 0 40px;
+	color: #000;
+	line-height: 50px;
+	font-size: 1em; /* 2019-11-26 */
+	transition: color 0.3s;
+}
+#GNB li a:hover,
+#GNB li a.on {
+	color: #ffde00;
+}
+
+/* intro */
+.intro {
+	position: relative;
+	/* padding: 100px 0; *//* 2019-11-26 */
+	min-width: 1200px; /* 2019-11-26 */
+	overflow: hidden; /* 2019-11-26 */
+}
+.intro .contents { /* 2019-11-26 */
+	display: table;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	width: 1100px;
+	height: 90%;
+	margin-left: -550px;
+	overflow-y: auto;
+}
+.intro .desc { /* 2019-11-26 */
+	display: table-cell;
+	vertical-align: middle;
+}
+.intro .image {
+	position: relative;
+	float: left;
+	width: 24%; /* 2019-11-26 */
+	padding-top: 10px; /* 2019-11-26 */
+	margin-left: 150px; /* 2019-11-26 */
+	text-align: right;
+}
+/* .page.active .image,
+.page.active .text {
+	transform: translateX(0);
+	opacity: 1;
+} */
+.intro .image span {
+	display: block;
+	position: absolute;
+	right: -100px;
+	top: 440px; /* 2019-11-26 */
+	font-size: 40px; /* 2019-11-26 */
+	line-height: 0.5; /* 2019-11-26 */
+	font-weight: 800;
+	color: #eaeaea; /* 2019-11-26 */
+}
+.intro .text {
+	float: right;
+	margin-right: 150px;/* 2019-11-26 */
+	height: 484px;
+}
+.intro .text h4 {
+	font-size: 24px; /* 2019-11-26 */
+	font-weight: 300; /* 2019-11-26 */
+	color: #ffde00; /* 2019-11-26 */
+}
+.intro .text h4 span {
+	display: block;
+	padding-left: 100px;
+}
+.intro .text p {
+	padding-top: 50px;
+	font-size: 15px; /* 2019-11-26 */
+	line-height: 28px;
+	color: #000; /* 2019-11-26 */
+}
+.intro .text p.second,
+.intro .text p.third {
+	padding-top: 0;
+}
+.intro .text p span {
+	font-weight: bold;
+}
+.intro .image img {
+	max-width: 100%; /* 2019-11-26 */
+}
+/* profile */
+.profile {
+	position: relative;
+	background: url(../images/bg_cont.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.profile::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+.profile .profile_inner {
+	display: table;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	width: 1100px;
+	height: 90%;
+	margin-left: -550px;
+	overflow-y: auto;
+}
+.profile .about {
+	display: table-cell;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -300px;
+	width: 600px;
+	height: 600px;
+	background-color: rgba(255,255,255,0.75);
+}
+.profile .first::before,
+.profile .first::after {
+	content: "";
+	display: block;
+}
+.profile .first::after {
+	clear: both;
+}
+.profile .first .image {
+	float: left;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+.profile .first .image a {
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-color: gray;
+	border-radius: 50%;
+}
+.profile .first .info {
+	float: left;
+	margin-left: 30px;
+	margin-top: 80px;
+}
+.profile .first .info li span {
+	display: block;
+	font-size: 15px;
+	line-height: 28px;
+}
+.profile .sec {
+	position: relative;
+	margin: 0 auto;
+	width: 450px;
+	height: 300px;
+	margin-top: 30px;
+}
+.profile .sec > ul {
+	width: 100%;
+	text-align: center;
+}
+.profile .sec > ul > li {
+	float: left;
+	width: 33.333%;
+	cursor: pointer;
+}
+.profile .sec > ul > li::before,
+.profile .sec > ul > li::after {
+	content: "";
+	display: block;
+}
+.profile .sec > ul > li::after {
+	clear: both;
+}
+.profile .sec h5 {
+	font-size: 15px;
+	border: 2px solid #000;
+	box-sizing: border-box;
+}
+.profile .sec > ul > li:nth-child(1) h5,
+.profile .sec > ul > li:nth-child(2) h5 {
+	border-right: none;
+}
+.profile .sec h5.on {
+	background-color: orange;
+}
+.profile .sec > ul > li > .desc {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 80%;
+	text-align: left;
+	font-size: 15px;
+	border: 2px solid #000;
+	border-top: none;
+	box-sizing: border-box;
+}
+.profile .sec > ul > li > .desc .skills {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+.profile .sec > ul > li > .desc .skills li {
+	margin-top: 20px;
+}
+.profile .sec > ul > li > .desc .skills li img {
+	vertical-align: middle;
+}
+.profile .sec > ul > li > .desc .skills li span {
+	margin-left: 20px;
+}
+.profile .sec > ul > li > .desc > .exp {
+	display: none;
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 55px;
+}
+.profile .sec > ul > li > .desc > .exp > li::before,
+.profile .sec > ul > li > .desc > .exp > li::after {
+	content: "";
+	display: block;
+}
+.profile .sec > ul > li > .desc > .exp > li::after {
+	clear: both;
+}
+.profile .sec > ul > li > .desc > .exp > li:nth-child(2){
+	margin-top: 50px;
+}
+.profile .sec > ul > li > .desc > .exp span {
+	float: left;
+}
+.profile .sec > ul > li > .desc > .exp span.text {
+	margin-left: 30px;
+}
+.profile .sec > ul > li > .desc > .edu {
+	display: none;
+	margin: 40px 0 0 50px;
+}
+.profile .sec > ul > li > .desc > .edu span {
+	line-height: 70px;
+}
+/* skill */
+.skill {
+	position: relative;
+	min-width: 1100px;
+}
+.skill .contents {
+	display: table;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	width: 1100px;
+	height: 90%;
+	margin-left: -550px;
+	vertical-align: middle;
+}
+.skill .contents ul {
+	display: table-cell;
+	vertical-align: middle;
+}
+.skill .contents ul li {
+	position: relative;
+	width: 50%;
+	margin-bottom: 20px;
+}
+.skill .contents ul li:nth-child(2n+1){
+	float: left;
+}
+.skill .contents ul li:nth-child(2n+2){
+	float: right;
+}
+.skill .contents ul li:nth-child(1){
+	transform: translate(60px, -150px);
+}
+.skill .contents ul li:nth-child(2){
+	transform: translate(-40px, 50px);
+}
+.skill .contents ul li:nth-child(3){
+	transform: translate(130px, 70px);
+}
+.skill .contents ul li:nth-child(4){
+	transform: translate(-90px, 270px);
+}
+.skill .contents ul .round span {
+	display: block;
+	width: 125px;
+	height: 125px;
+	text-indent: -9999px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-color: orange;
+}
+.skill .contents ul li:nth-child(1) .round span{
+	transform: translate(-30px, 20px);
+}
+.skill .contents ul li:nth-child(2) .round span{
+	transform: translate(100px, -40px);
+}
+.skill .contents ul li:nth-child(3) .round span{
+	transform: translate(40px, 50px);
+}
+.skill .contents ul li:nth-child(4) .round span{
+	transform: translate(350px, -10px);
+}
+.skill .contents ul .text {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.skill .contents ul .title {
+	float: left;
+	padding: 30px 0 0 30px;
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #ffde00;
+}
+.skill .contents ul .title.one span {
+	display: inline-block;
+	letter-spacing: 14px;
+}
+.skill .contents ul .title.sec span {
+	display: inline-block;
+	letter-spacing: 90px;
+}
+.skill .contents ul .title.th span {
+	display: inline-block;
+	letter-spacing: 10px;
+}
+.skill .contents ul .title.fo span {
+	display: inline-block;
+	letter-spacing: 9px;
+}
+.skill .contents ul .desc {
+	position: absolute;
+	left: 200px;
+	top: 30px;
+	width: 100%;
+	font-size: 14px;
+}
+.skill .contents ul li:nth-child(1) .desc{
+	top: 20px;
+}
+.skill .contents ul li:nth-child(3) .desc{
+	left: 140px;
+}
+/* port1_pc */
+.port1_pc {
+	position: relative;
+	min-width: 1100px;
+	background: url() no-repeat center center;
+	background-size: cover;
+}
+.port1_pc .pc1_inner {
+	display: table;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -550px;
+	width: 1100px;
+	height: 90%;
+}
+.port1_pc .cont {
+	display: table-cell;
+	vertical-align: middle;
+}
+.port1_pc .cont .pc_info {
+	float: left;
+	margin-left: 50px;
+	margin-top: 80px;
+}
+.port1_pc .cont .pc_info p {
+	font-size: 15px;
+	line-height: 25px;
+	margin-top: 40px;
+}
+.port1_pc .cont .pc_info .color1 {
+	margin-top: 40px;
+}
+.port1_pc .cont .pc_info .color1 li {
+	display: inline-block;
+}
+.port1_pc .cont .pc_info .color1 li span {
+	display: block;
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.port1_pc .cont .pc_info .button {
+	margin-top: 40px;
+}
+input[type=button1],
+input[type=button2]{
+	display: inline-block;
+	padding: 5px 10px;
+	width: 140px;
+	height: 50px;
+	background-color: #ffde00;
+	font-size: 15px;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+input[type=button2] {
+	margin-left: 30px;
+}
+.port1_pc .cont .pc_photo {
+	float: right;
+	width: 50%;
+}
+.port1_pc .cont .pc_photo img {
+	max-width: 100%;
+}
+.port1_pc .cont .pc_num {
+	position: absolute;
+	left: 150px;
+	bottom: -150px;
+}
+/* port1_mobile */
+.port1_mobile {
+	position: relative;
+	min-width: 1100px;
+}
+.port1_mobile .cont {
+	display: table;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -550px;
+	width: 1100px;
+	height: 90%;
+}
+.port1_mobile .cont .mb_photo {
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+}
+.port1_mobile .cont .mb_photo img {
+	max-width: 100%;
+}
+.port1_mobile .cont .info {
+	display: table-cell;
+	padding-right: 50px;
+	text-align: right;
+	vertical-align: middle;
+}
+.port1_mobile .cont .info li {
+	position: relative;
+}
+.port1_mobile .cont .info li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+	width: 100%;
+	height: 2px;
+	background-color: #eaeaea;
+}
+.port1_mobile .cont .info span {
+	line-height: 35px;
+	font-size: 15px;
+}
+.port1_mobile .cont .info .text1 {
+	margin-top: 40px;
+}
+.port1_mobile .cont .info .text1 span.desc {
+	margin-left: 20px;
+}
+.port1_mobile .cont .info .text2 {
+	margin-top: 40px;
+}
+/* port2_pc */
+.port2_pc {
+	position: relative;
+	min-width: 1100px;
+}
+.port2_pc .pc2_inner {
+	display: table;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -550px;
+	width: 1100px;
+	height: 90%;
+}
+.port2_pc .cont {
+	display: table-cell;
+	vertical-align: middle;
+}
+.port2_pc .cont .pc_info {
+	float: left;
+	margin-left: 50px;
+	margin-top: 80px;
+}
+.port2_pc .cont .pc_info p {
+	font-size: 15px;
+	line-height: 25px;
+	margin-top: 40px;
+}
+.port2_pc .cont .pc_info .color2 {
+	margin-top: 40px;
+}
+.port2_pc .cont .pc_info .color2 li {
+	display: inline-block;
+}
+.port2_pc .cont .pc_info .color2 li span {
+	display: block;
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.port2_pc .cont .pc_info .button {
+	margin-top: 40px;
+}
+input[type=button1],
+input[type=button2]{
+	display: inline-block;
+	padding: 5px 10px;
+	width: 140px;
+	height: 50px;
+	background-color: #ffde00;
+	font-size: 15px;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+input[type=button2] {
+	margin-left: 30px;
+}
+.port2_pc .cont .pc_photo {
+	float: right;
+	width: 50%;
+}
+.port2_pc .cont .pc_photo img {
+	max-width: 100%;
+}
+.port2_pc .cont .pc_num {
+	position: absolute;
+	left: 150px;
+	bottom: -150px;
+}
+/* port2_mobile */
+.port2_mobile {
+	position: relative;
+	min-width: 1100px;
+}
+.port2_mobile .cont {
+	display: table;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -550px;
+	width: 1100px;
+	height: 90%;
+}
+.port2_mobile .cont .mb_photo {
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+}
+.port2_mobile .cont .mb_photo img {
+	max-width: 100%;
+}
+.port2_mobile .cont .info {
+	display: table-cell;
+	padding-right: 50px;
+	text-align: right;
+	vertical-align: middle;
+}
+.port2_mobile .cont .info li {
+	position: relative;
+}
+.port2_mobile .cont .info li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+	width: 100%;
+	height: 2px;
+	background-color: #eaeaea;
+}
+.port2_mobile .cont .info span {
+	line-height: 35px;
+	font-size: 15px;
+}
+.port2_mobile .cont .info .text1 {
+	margin-top: 40px;
+}
+.port2_mobile .cont .info .text1 span.desc {
+	margin-left: 20px;
+}
+.port2_mobile .cont .info .text2 {
+	margin-top: 40px;
+}
+/* port3_pc */
+.port3_pc {
+	position: relative;
+	min-width: 1100px;
+}
+.port3_pc .pc3_inner {
+	display: table;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -550px;
+	width: 1100px;
+	height: 90%;
+}
+.port3_pc .cont {
+	display: table-cell;
+	vertical-align: middle;
+}
+.port3_pc .cont .pc_info {
+	float: left;
+	margin-left: 50px;
+	margin-top: 80px;
+}
+.port3_pc .cont .pc_info p {
+	font-size: 15px;
+	line-height: 25px;
+	margin-top: 40px;
+}
+.port3_pc .cont .pc_info .color3 {
+	margin-top: 40px;
+}
+.port3_pc .cont .pc_info .color3 li {
+	display: inline-block;
+}
+.port3_pc .cont .pc_info .color3 li span {
+	display: block;
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.port3_pc .cont .pc_info .button {
+	margin-top: 40px;
+}
+input[type=button1],
+input[type=button2]{
+	display: inline-block;
+	padding: 5px 10px;
+	width: 140px;
+	height: 50px;
+	background-color: #ffde00;
+	font-size: 15px;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+input[type=button2] {
+	margin-left: 30px;
+}
+.port3_pc .cont .pc_photo {
+	float: right;
+	width: 50%;
+}
+.port3_pc .cont .pc_photo img {
+	max-width: 100%;
+}
+.port3_pc .cont .pc_num {
+	position: absolute;
+	left: 150px;
+	bottom: -150px;
+}
+/* port3_mobile */
+.port3_mobile {
+	position: relative;
+	min-width: 1100px;
+}
+.port3_mobile .cont {
+	display: table;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	margin-left: -550px;
+	width: 1100px;
+	height: 90%;
+}
+.port3_mobile .cont .mb_photo {
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+}
+.port3_mobile .cont .mb_photo img {
+	max-width: 100%;
+}
+.port3_mobile .cont .info {
+	display: table-cell;
+	padding-right: 50px;
+	text-align: right;
+	vertical-align: middle;
+}
+.port3_mobile .cont .info li {
+	position: relative;
+}
+.port3_mobile .cont .info li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+	width: 100%;
+	height: 2px;
+	background-color: #eaeaea;
+}
+.port3_mobile .cont .info span {
+	line-height: 35px;
+	font-size: 15px;
+}
+.port3_mobile .cont .info .text1 {
+	margin-top: 40px;
+}
+.port3_mobile .cont .info .text1 span.desc {
+	margin-left: 20px;
+}
+.port3_mobile .cont .info .text2 {
+	margin-top: 40px;
+}
+/* aside */
+.aside {
+	position: fixed;
+	left: 50px;
+	top: 50%;
+	margin-top: -90px; /* 2019-11-26 */
+}
+.aside li a {
+	display: block;
+	margin: 10px 0;
+	width: 10px; /* 2019-11-26 */
+	height: 10px; /* 2019-11-26 */
+	text-indent: -9999px;
+	overflow: hidden;
+	border-radius: 5px; /* 2019-11-26 */
+	background-color: #eaeaea;
+	transition: height 0.3s;
+}
+.aside li.on a {
+	height: 80px; /* 2019-11-26 */
+	background-color: #ffde00;
+}
